@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div class="adminH1">
+        <h1>Admin Dash</h1>
+
+    </div>
+
+    <div class="">
+        <h4>Approve Drivers</h4>
+
+        <table class="table table-bordered table-danger table-responsive">
+            <tr>
+                <th>Drivers Name</th>
+                <th>Email Address</th>
+                <th>Location</th>
+                <th>Transport</th>
+                <th>Licence</th>
+                <th>Full Time/Part Time</th>
+                <th>Availability
+                <th>
+            </tr>
+            <tr ng-repeat="x in Drivers">
+                <td>{{x.FName}}</td>
+                <td>{{x.Email}}</td>
+                <td>{{x.Location}}</td>
+                <td>{{x.Transport}}</td>
+                <td>{{x.Licence}}</td>
+                <td>{{x.FTime}}</td>
+                <td>{{x.Availability}}</td>
+                <td>
+                    <div class="btn-group">
+                        <a type="button" href="https://mail.google.com/mail/u/0/#inbox" class="btn btn-success" ng-click="ApproveDrv(x.Id,x);">Approve</a>
+                        <a type="button" href="#" class="btn btn-danger" ng-click="DeclineDrv();">Decline</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <button type="button" class="btn" id="btnDrv" ng-click="DrvDetails();">{{drvBtn}}</button>
+    </div>
+</body>
+</html>

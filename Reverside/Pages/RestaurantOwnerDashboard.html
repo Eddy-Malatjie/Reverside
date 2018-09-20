@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div class="adminH1">
+        <h1>Welcome Partner</h1>
+
+    </div>
+    <div class="container-fluid">
+        <div class="container-fluid">
+   <div class="row">
+
+                <div class="col-12">
+                    <h4 class="text-center">Manage Your Business</h4>
+                  
+                    <div class="col-6">
+
+                        <!--<h6>Add a picture for your restaurant</h6>-->
+
+                    </div>
+                       <div class="col-6">
+
+                        <h4>Add Menu Items</h4>
+
+                        <form class="text-left" name="RegisterProductForm" ng-submit="AddProduct();">
+
+                           <br />
+                            <div class="container ">
+                                <div class="form-group">
+                                    <label for="PName">Product Name</label>
+                                    <input type="text" ng-model="product.PName" class="form-control" id="PName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Desc">Product Description</label>
+                                    <input type="text" ng-model="product.Desc" class="form-control" id="Desc" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="price">Price</label>
+                                    <input type="number" ng-model="product.Price" class="form-control " id="price" required>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn">Submit Product</button>
+                               </div>
+                                <div hidden>
+                                    {{product.rest_Id='1'}}
+                                </div>
+
+                               </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <br />
+            </div>
+            
+           
+
+    <div class="row container-fluid" >
+               
+        <h4>Edit/Remove Menu Items</h4>
+     
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-4 col-md-6" ng-repeat="x in Products">
+                <table class="table table-info edit" style="font-family:'Berlin Sans FB';border-radius:13px;">
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label for="PName">Product Name</label>
+                                <input type="text" ng-model="x.PName" class="form-control" id="PName" ng-disabled="update" required>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label for="Desc">Product Description</label>
+                                <input type="text" ng-model="x.Desc" class="form-control" id="Desc" ng-disabled="update" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label for="price">Price</label>
+                                <input type="number" ng-model="x.Price" class="form-control " id="price" ng-disabled="update" required>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-dark" ng-click="UpdateProd();" ng-show="update">{{btnModify}}</button>
+                            <button type="button" class="btn btn-dark" ng-click="edit(x.Id,x);" ng-hide="update">{{btnModify}}</button> 
+                            <button type="button" class="btn btn-light" ng-click="DeleteProd(x.Id);">Remove</button>
+                        </td>
+                    </tr>
+                </table>
+               
+            </div>
+           
+        </div>
+        <div class="container-fluid">
+           
+            <button type="button" class="btn" id="btnProd" ng-click="prodDetails();">Show Products</button>
+        </div>
+        </div>
+    </div>
+        </div>
+    {{message}}
+</body>
+</html>

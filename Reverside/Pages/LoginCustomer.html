@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../scripts/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../customStyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    {{message}}
+    <div class="container" style="padding:50px;">
+        <div class="row">
+            <div class="col-md-3 col-sm-2 col-xs-6"></div>
+            <div class="col-md-6 col-sm-8">
+                <form class="text-center" style="align-self:center" name="RegisterCustomerForm" ng-submit="LoginUser();">
+                    <h4>Welcome Back!</h4>
+                    <p>You're moments away from good, hot food!</p>
+
+                    <div class="container ">
+
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" ng-model="Login.Email" class="form-control inputLine" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password</label>
+                            <input type="password" ng-model="Login.Password" class="form-control inputLine" id="pwd" >
+                        </div>
+
+
+
+                        <button type="submit" class="btn" style="border-radius:50px; width:200px;">Log In</button>
+                        <div class="form-group list-inline">
+                            New to MR D Food?
+                            <a href="#" role="button">Create new account</a>
+                        </div>
+
+                    </div>
+                </form>
+            </div><div class="col-md-3 col-sm-2 "></div>
+        </div>
+    </div>
+
+    <table>
+        <tr ng-repeat="cust in Customer">
+            <td>{{cust.FName}}</td>
+            <td>{{cust.LName}}</td>
+            <td>{{cust.Email}}</td>
+        </tr>
+    </table>
+</body>
+{{message}}
+{{cust.FName}}
+</html>

@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <!--strart of Navbar-->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top navbar-inverse mb-4" style="z-index:1;">
+        <div>
+            <a class="navbar-brand" href="#">Home</a>
+            <a class="navbar-brand" href="#">Press</a>
+            <a class="navbar-brand" href="#!AddRestaurant">Become a Restaurant Partner</a>
+            <a class="navbar-brand" href="#!AddDriver">Become a Driver</a>
+            <a class="navbar-brand" href="#">FAQ's</a>
+            <a class="navbar-brand" href="#">Careers</a>
+        </div>
+    </nav>
+    <br />
+
+    <!--End of Navbar-->
+    <!--Head of page-->
+    <div>
+        <div class="intro-header intro-header-yellow intro-header-driver">
+            <div class="container">
+                <div>
+                    <h1>
+                        "Become a"
+                        <br />
+                        "Driver Partner"
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container  registerDrvForm col-12 col-sm-12 col-xs-12">
+        <form  style="align-self:center" name="RegisterDriverForm" ng-submit="AddDriver();">
+
+            {{message}}
+            <div class="container ">
+                <div class="form-group ">
+                    <label for="fname">Full name</label>
+                    <input type="text" ng-model="driver.FName" class="form-control red-border " id="fName" required>
+                </div>
+
+                <div class="form-group ">
+                    <label for="Phone">Phone Number</label>
+                    <input type="tel" ng-model="driver.Phone" class="form-control red-border " id="Phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" ng-model="driver.Email" class="form-control red-border " id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="loc">Location</label>
+                   <select type="text" ng-model="driver.Location" class="form-control red-border " id="loc" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="Alberton">Alberton</option>
+                            <option value="Ballito">Ballito</option>
+                            <option value="Bedfordview">Bedfordview</option>
+                            <option value="Benoni">Benoni</option>
+                            <option value="Bloemfontein">Bloemfontein</option>
+                            <option value="Brakenfell">Brakenfell</option>
+                            <option value="Bryanston">Bryanston</option>
+                            <option value="Centurion">Centurion</option>
+                            <option value="Constantia">Constantia</option>
+                            <option value="Cresta">Cresta</option>
+                            <option value="Durban North">Durban North</option>
+                            <option value="East London">East London</option>
+                            <option value="East Rand Mall">East Rand Mall</option>
+                            <option value="Edenvale">Edenvale</option>
+                            <option value="Fordsburg">Fordsburg</option>
+                            <option value="Fourways">Fourways</option>
+                            <option value="Gardens">Gardens</option>
+                            <option value="Gateway">Gateway</option>
+                            <option value="Gordons Bay">Gordons Bay</option>
+                            <option value="Hatfield">Hatfield</option>
+                            <option value="Kempton Park">Kempton Park</option>
+                            <option value="Kenilworth">Kenilworth</option>
+                            <option value="Kimberley">Kimberley</option>
+                            <option value="Klerksdorp">Klerksdorp</option>
+                            <option value="Melville">Melville</option>
+                            <option value="Menlyn">Menlyn</option>
+                            <option value="Midrand">Midrand</option>
+                            <option value="Milnerton">Milnerton</option>
+                            <option value="Morningside">Morningside</option>
+                            <option value="Nelspruit">Nelspruit</option>
+                            <option value="Northgate">Northgate</option>
+                            <option value="Norwood">Norwood</option>
+                            <option value="Parow">Parow</option>
+                            <option value="Polokwane">Polokwane</option>
+                            <option value="Port Elizabeth">Port Elizabeth</option>
+                            <option value="Potchefstroom">Potchefstroom</option>
+                            <option value="Randburg">Randburg</option>
+                            <option value="Rivonia">Rivonia</option>
+                            <option value="Rondebosch">Rondebosch</option>
+                            <option value="Rosebank">Rosebank</option>
+                            <option value="Sea Point">Sea Point</option>
+                            <option value="Somerset West">Somerset West</option>
+                            <option value="Southern Suburbs (JHB)">Southern Suburbs (JHB)</option>
+                            <option value="Stellenbosch">Stellenbosch</option>
+                            <option value="Sunninghill">Sunninghill</option>
+                            <option value="Tableview">Tableview</option>
+                            <option value="Tokai">Tokai</option>
+                            <option value="Tygervalley">Tygervalley</option>
+                            <option value="Weltevredepark">Weltevredepark</option>
+                            <option value="Westrand">Westrand</option>
+                            <option value="Westville">Westville</option>
+                            <option value="White River">White River</option>
+
+                        </select> </div>
+
+                <div class="form-group">
+                    <label for="trans">Transport</label>
+                    <select type="text" ng-model="driver.Transport" class="form-control red-border " id="trans" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Car">Car</option>
+                        <option value="Bike">Bike</option>
+                        <option value="No Transport">No Transport</option>
+                       
+                    </select>
+                </div>
+
+                <div class="form-group">
+                <label for="lic">Drivers Licence</label>
+                    <br />
+                 <label class="radio-inline">
+                  <input type="radio" ng-model="driver.Licence" name="Licence" value="Licensed" id="lic" />Yes
+                 </label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="driver.Licence" name="Licence" value="Not Licensed" id="lic" />No
+               </label>
+                
+                </div>
+
+                <div class="form-group">
+                    <label for="ftime">Full Time</label>
+                    <select type="text" ng-model="driver.FTime" class="form-control red-border " id="ftime" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Full Time">Full Time</option>
+                        <option value="Part Time">Part Time</option>
+                        <option value="Other">Other</option>
+                     </select>
+                
+                 </div>
+
+                <div class="form-group">
+                    <label for="avail">Availability</label>
+
+                    <select type="text" ng-model="driver.Availability" class="form-control red-border " id="avail" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Anytime">Anytime</option>
+                        <option value="Night And Weekends">Night And Weekends</option>
+                        <option value="Weekends Only">Weekends Only</option>
+                        <option value="Weekdays Only">Weekdays Only</option>
+
+                    </select>
+                 </div>
+
+                <button type="submit" class="btn form-control" style="border-radius:10px;">Please Complete the form...</button>
+              
+            </div>
+
+
+        </form>
+
+        </div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <!--beginning of navbar-->
+
+    <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top navbar-inverse mb-4" style="z-index:1;">
+        <a class="navbar-brand" href="#">R50 OFF ON YOUR FIRST APP ORDER</a>
+
+        <div ng-show="{{isRegRestPage}}">
+
+            <a class="navbar-brand" href="#">Home</a>
+            <a class="navbar-brand" href="#">Press</a>
+            <a class="navbar-brand" href="#">Become a Restaurant Partner</a>
+            <a class="navbar-brand" href="#">Become a Driver</a>
+            <a class="navbar-brand" href="#">FAQ's</a>
+            <a class="navbar-brand" href="#">Careers</a>
+        </div>
+        <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>-->
+        <!--<div class="collapse navbar-collapse" id="navbarCollapse">-->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <!--<a class="nav-link" href="#">FREE DELIVERY ON YOUR FIRST APP ORDER <span class="sr-only">(current)</span></a>-->
+        </ul>
+
+
+        <div style="color:white" ng-show="{{isLoggedIn}}">
+            <a href="#!LoginUser" id="logInBTN">Menu<span class="navbar-toggler-icon"></span></a>
+        </div>
+
+        <div ng-show="{{!isLoggedIn}}">
+            <a href="#!LoginUser" style="color: #fff;" id="logInBTN">LOGIN</a>
+            <a href="#!AddUser" style="background: #6dcff6;color: #fff;" class="btn-primary btn-sm" id="signUpBTN">SIGNUP</a>
+        </div>
+        
+
+        <!--</div>-->
+    </nav>
+    <br /><br />
+    <!--end of navbar-->
+    <a href="#!AddUser" style="background: #6dcff6;color: #fff;" class="btn-primary btn-sm form-control" id="signUpBTN">Admin</a>
+    <div class="homepage-welcome">
+            <div class="left-layer">
+                <div class="welcome-layer">
+                    <br /><br />
+                    <img alt="Mr D" src="/images/mrd_logo.svg" class="logo">
+
+                    <h1 class="title">
+                       <strong> The food you feel like.
+                        <br>Delivered fast &amp; hot.</strong>
+                    </h1>
+                    <form ng-submit="EnterAddress();">
+
+                        <div class="form-group" >
+
+                            <input type="text" style="text-align:center;"ng-model="Address.SearchAddress" placeholder="Enter your street Address" class="form-control" id="SearchAddress" required>
+                        </div>
+
+                        <button type="submit" class="form-control addressBTN " style="background: #ffe700;">Log In</button>
+
+                    </form>
+                </div>
+        </div>
+    </div>
+   
+    <!--How it works section -->
+    <div class="howitworks-section ng-scope">
+        <h2 class="section-title"> How it works, from the chef to your door.</h2>
+        <ul class="howitworks-list" style="list-style:none;">
+            <li class="howitworks-item" >
+               
+                
+
+                <img class="info-icon-address" src="../images/info-icon-address.png" />
+                                
+                <h4>Add Your Address</h4>
+                <p>
+                    We’re in 1900 suburbs, enter your street address to see what’s cooking near you.
+                </p>
+            </li>
+            <li class="howitworks-item">
+              
+                <img class="info-icon-restaurant" src="../images/info-icon-restaurant.png" />
+                                         
+                  <h4>Choose Restaurant</h4>
+                <p>We deliver from over 2500 restaurants, browse your local favourites.</p>
+            </li>
+            <li class="howitworks-item">
+               
+                
+                <img class="info-icon-payment" src="../images/info-icon-payment.png" />
+                
+                 <h4>Pay with Cash, Card or EFT</h4>
+                <p>
+                    Pay securely by card or EFT in app, or with cash on delivery.
+                </p>
+            </li>
+            <li class="howitworks-item">
+               
+
+                <img class="info-icon-tracking" src="../images/info-icon-delivery.png" />
+
+                 <h4>Chill and Track Your Order</h4>
+                <p>
+                    The app will keep you updated with every step of the delivery process.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <a href="#!Admin" style="background: #6dcff6;color: #fff;" class="btn-primary btn-sm form-control" id="adminBtn">Admin</a>
+    <a href="#!RestaurantOwner" style="background: #6dcff6;color: #fff;" class="btn-primary btn-sm form-control" id="RO">Restaurant Owner</a>
+
+     <!--Brands couresel -->
+    <!--<div class="brands-section">
+        <h2 class="section-title">
+            Delivery from over 2500 restaurants, including SA's favourites...
+        </h2>
+        <div class="carousel">
+            <div class="carousel-control-prev-icon">
+                <img src="../images/arrow_blue_prev.svg" />
+            </div>
+            <div class="carousel-inner">
+                <img src="../images/info-icon-address.png" />
+            </div>
+            <div class="carousel-control-next">
+                <img src="../images/arrow_blue_next.svg" />
+            </div>
+        </div>
+
+    </div>-->
+    <div class="brands-section ng-scope">
+        <h2 class="section-title">Delivery from over 2500 restaurants, including SA's favourites...</h2>
+
+        </div>
+    <!--app store section -->
+    <div class="appstore-section" >
+        <div class="app-buttons">
+            <h2>Have you got the app?</h2>
+            <p>
+                For a better ordering experience, exclusive promotions & live order tracking.
+                <a class="apple" rel="nofollow" href="https://ap3x.adj.st?adjust_t=e9d7p3&adjust_deeplink=mrdfood://&adjust_fallback=https://itunes.apple.com/za/app/mr-d-food-delivery-takeout/id1031141698?mt=8"></a>
+                <a class="android" rel="nofollow" href="https://ap3x.adj.st?adjust_t=e9d7p3&adjust_deeplink=mrdfood://&adjust_fallback=https://play.google.com/store/apps/details?id=com.mrd.food"></a>
+            </p>
+        </div>
+        
+    </div>
+
+    <!--Enquiry Section at the bottom -->
+    <div class="enquireSection">
+
+        <!--Register Driver Card -->
+        <div class="container">
+            <div class="cards" >
+                <img src="../images/joinus_drivers.jpg" />
+                <div class="container-text">
+                    <h2 class="title">Become a Driver</h2>
+                    <p>Drivers earn up to R100 per hour on a flexible schedule delivering food, parcels and credit cards</p>
+                </div>
+                <a href="#!AddDriver" class="button form-control"><strong>Sign Up</strong></a>
+            </div>
+
+        </div>
+
+        <!--Register Restaurant Card -->
+        <div class="container">
+            <div class="cards">
+                <img src="../images/joinus_partners.jpg" />
+                <div class="container-text">
+                    <h2 class="title">Become a Partner</h2>
+                    <p>
+                        Let us bring you new customers, make you more money and handle all the hassles of providing a delivery service!
+                    </p>
+                </div>
+                <a href="#!AddRestaurant" class="button form-control"><strong>Enquire</strong></a>
+            </div>
+        </div>
+
+        <!--Apply for a job Card -->
+        <div class="container">
+            <div class="cards">
+
+                <img src="../images/joinus_careers.jpg" />
+                <div class="container-text">
+                    <h2 class="title">Careers</h2>
+                    <p>
+
+                        We’re looking for extraordinary minds to join our fast growing team based in the takealot.com Head Office in Cape Town.
+                    </p>
+                </div>
+                <a href="#!AddRestaurant" class="button form-control"><strong>Apply Now </strong> </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!--<div class="LoginMenu" id="LoginMenu">
+
+        <div class="show-menu menu_view ">
+            <div class="container-fluid" style="padding:50px;">
+               <h2><s> {{CurrentUserName}}</s> </h2>
+                
+                <h6>{{CurrentUserEmail}}</h6>
+                
+                <br />
+                <div>
+                    <h4>Place a New Order</h4>
+                    <hr class="lineStyle" />
+                    <h5>Order History</h5>
+                    <hr class="lineStyle" />
+                    <h5>Profile</h5>
+                    <hr class="lineStyle" />
+                    <h5>FAQ's</h5>
+                    <hr class="lineStyle" />
+                    <h5>Terms and Conditions</h5>
+                    <hr class="lineStyle" />
+                    <h5>Logout</h5>
+                </div> 
+                
+                
+             </div>
+           
+           </div>
+    </div>-->
+    <!--<div class="container-fluid">
+        <div class="row">
+            <div class="col-6" style="background-color:#6dcff6;"  >
+                <div class="container">
+
+                    <p style="text-align:left; font-size:xx-large; font-family:'Berlin Sans FB'"> The food you feel like.<br />
+                    Delivered fast & hot.  </p> 
+
+                    <form ng-submit="EnterAddress();">
+
+                        <div class="form-group">
+                            
+                            <input type="text" ng-model="Address.SearchAddress" placeholder="Enter your street Address" class="form-control " id="SearchAddress" required>
+                        </div>
+
+                        <button type="submit" class="form-control " style="border-radius:50px; ">Log In</button>
+
+                    </form>
+
+
+                </div>
+            </div>
+            <div class="col-6" style="background-image: url('../images/pizza (1).png');">
+                <div class="container">
+
+                    
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6"  height:500px">
+                <div class="container">
+
+                    
+                    <a href="#!AddRestaurant" class="btn-primary btn-sm" id="BTN">SIGNUP</a>
+
+                </div>
+            </div>
+        </div>
+    </div>-->
+    {{message}}
+</body>
+</html>

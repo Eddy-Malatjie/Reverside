@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div class="adminH1">
+        <h1>Manage Restaurants</h1>
+
+    </div>
+    <div class="">
+        <h4>Approve Restaurants Partner Applications</h4>
+
+        <table class="table table-info table-bordered table-responsive ">
+            <thead>
+                <tr>
+                    <th>Point of Contact</th>
+                    <th>Email Address</th>
+                    <th>Location</th>
+                    <th>Restaurant Name</th>
+                    <th>Additional Info</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in Restaurants ">
+                    <td>{{x.FName}}</td>
+                    <td>{{x.Email}}</td>
+                    <td>{{x.Location}}</td>
+                    <td>{{x.RName}}</td>
+                    <td>{{x.Additional}}</td>
+
+
+                    <td>
+                        <div class="btn-group">
+                            <a type="button" href="https://mail.google.com/mail/u/0/#inbox" class="btn btn-success" ng-click="ApproveRes(x.Id,x);">Approve</a>
+                            <a type="button" href="#" class="btn btn-danger" ng-click="DeclineRes();">Decline</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn" id="btnRes" ng-click="ResDetails();">{{restBtn}}</button>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/scripts/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/scripts/angular.js"></script>
+    <script src="~/scripts/angular-route.js"></script>
+    <script src="~/MyScripts/Controller.js"></script>
+    <script src="~/MyScripts/Module.js"></script>
+    <link href="~/customStyleSheet.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.10.2.js"></script>
+
+</head>
+<body ng-app="AngularModule">
+    <div ng-show="{{isRegRestPage}}">
+
+        <a class="navbar-brand" href="#">Home</a>
+        <a class="navbar-brand" href="#">Press</a>
+        <a class="navbar-brand" href="#">Become a Restaurant Partner</a>
+        <a class="navbar-brand" href="#">Become a Driver</a>
+        <a class="navbar-brand" href="#">FAQ's</a>
+        <a class="navbar-brand" href="#">Careers</a>
+    </div>
+    <div ng-view></div>
+
+</body>
+</html>
